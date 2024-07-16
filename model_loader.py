@@ -88,22 +88,6 @@ def scrape_website(base_url):
 base_url = 'http://www.trimble.com'
 content = scrape_website(base_url)
 
-# Save content to PDF (optional)
-def save_to_pdf(content, filename='output.pdf'):
-    pdf = canvas.Canvas(filename, pagesize=letter)
-    width, height = letter
-
-    y = height - 40
-    for paragraph in content:
-        pdf.drawString(30, y, paragraph)
-        y -= 20
-        if y < 40:
-            pdf.showPage()
-            y = height - 40
-
-    pdf.save()
-
-save_to_pdf(content)
 
 # Using a pre-trained BERT model for question answering
 qa_model = pipeline('question-answering', model='distilbert-base-uncased-distilled-squad')
