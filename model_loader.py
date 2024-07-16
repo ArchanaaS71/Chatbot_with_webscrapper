@@ -7,9 +7,9 @@ Original file is located at
     https://colab.research.google.com/drive/17pUc5S8KtWQiwsHMzcROq7KbMHusmHiq
 """
 
-!pip install streamlit
+"""!pip install streamlit
 !pip install transformers
-!pip install reportlab
+!pip install reportlab"""
 import requests
 from bs4 import BeautifulSoup
 import re
